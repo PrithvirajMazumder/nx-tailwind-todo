@@ -65,7 +65,7 @@ export const Upcoming = () => {
               checked={todo.completed}
               onChange={(event) => {
                 setTodos((oldTodos) => {
-                  oldTodos[index].completed = true;
+                  oldTodos[index].completed = event.target.checked;
 
                   return [...oldTodos];
                 });
