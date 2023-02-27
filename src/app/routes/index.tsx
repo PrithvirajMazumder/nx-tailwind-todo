@@ -1,6 +1,6 @@
 import { Route, Routes as RouteList } from 'react-router-dom';
 import { Completed } from '@/pages/Completed';
-import { Details } from '@/pages/Details';
+import { TodoDetails } from '@/pages/TodoDetails';
 import { Upcoming } from '@/pages/Upcoming';
 import { Today } from '@/pages/Today';
 
@@ -12,7 +12,7 @@ export const Routes = () => (
     <Route
       path="/todo/:todoId"
       action={({ params }) => params}
-      element={<Details />}
+      element={<TodoDetails />}
     />
   </RouteList>
 );
