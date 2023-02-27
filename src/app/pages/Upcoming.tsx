@@ -75,7 +75,7 @@ export const Upcoming = () => {
           </li>
         ))}
       </ol>
-      <Link to={'/Details'}>move to another page</Link>
+      <Link to={'/details'}>move to another page</Link>
     </>
   );
 };
