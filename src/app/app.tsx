@@ -3,12 +3,17 @@ import '../styles.css';
 import { Routes } from '@/routes';
 import ToastStore from '@/stores/toastStore';
 import { Toast } from '@/components/Toast';
+import Drawer from '@/components/Drawer';
+import { BottomNav } from '@/components/BottomNav';
 
 export function App() {
   return (
     <ToastStore>
       <Toast />
-      <Routes />
+      <Drawer>
+        <Routes />
+        <BottomNav />
+      </Drawer>
     </ToastStore>
   );
 }

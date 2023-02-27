@@ -15,7 +15,17 @@ export default class TodoService {
     return data;
   };
 
-  public static updateTodo = async (todo: Todo) => {
+  public static updateTodo = async (todo: Todo) =>
     await axios.put(`${getBaseUrl(this.endpoint)}/${todo.id}`, todo);
-  };
+
+  public static getCompletedTodos = async () =>
+    (await this.getTodos()).filter((todo) => todo.completed);
+
+  public static getUpcomingTodos = async () =>
+    (await this.getTodos()).filter((todo) => !todo.completed);
+
+  public static getTodayTodos = async () =>
+    (await this.getUpcomingTodos()).filter(
+      (todo) => new Date(todo.createdAt).getDate() === new Date().getDate()
+    );
 }

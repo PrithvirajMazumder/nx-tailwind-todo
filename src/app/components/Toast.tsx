@@ -11,7 +11,7 @@ export const Toast = () => {
   }, [toast]);
 
   return (
-    <div className="py-2 px-4">
+    <div className="absolute z-30 bottom-5 w-full px-4">
       {toast ? (
         <div className={`alert shadow-lg alert-${toast.type} py-2 px-4`}>
           <div>

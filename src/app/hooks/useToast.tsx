@@ -11,6 +11,8 @@ const useToast = () => {
       addToast({ message, type: 'info', autoClear }),
     warning: (message: string, autoClear?: number) =>
       addToast({ message, type: 'warning', autoClear }),
+    success: (message: string, autoClear?: number) =>
+      addToast({ message, type: 'success', autoClear }),
   };
 };
 

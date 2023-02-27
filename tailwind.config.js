@@ -10,14 +10,14 @@ module.exports = {
     ),
     ...createGlobPatternsForDependencies(__dirname),
   ],
-  safelist: ['alert-error', 'alert-warning', 'alert-info'],
+  safelist: ['alert-error', 'alert-warning', 'alert-info', 'alert-success'],
   theme: {
     extend: {},
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
   daisyui: {
     styled: true,
-    themes: ['forest'],
+    themes: ['night'],
     base: true,
     utils: true,
     logs: true,
