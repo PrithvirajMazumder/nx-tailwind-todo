@@ -32,7 +32,7 @@ export const Today = () => {
         }}
       />
       <Loader isLoading={isTodosLoading} />
-      {!todos?.length ? (
+      {!todos?.length && !isTodosLoading ? (
         <div className="mt-10">
           <EmptyMessage />
         </div>
