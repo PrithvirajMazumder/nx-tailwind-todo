@@ -1,0 +1,1 @@
+export const getBaseUrl = (endpoint: string) => `http://localhost:3000/api/${endpoint}`;

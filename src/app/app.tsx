@@ -1,15 +1,15 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
-
-import NxWelcome from './nx-welcome';
+import '../styles.css';
+import { Routes } from '@/routes';
+import ToastStore from '@/stores/toastStore';
+import { Toast } from '@/components/Toast';
 
 export function App() {
   return (
-    <>
-      <NxWelcome title="ww-todos" />
-
-      <div />
-    </>
+    <ToastStore>
+      <Toast />
+      <Routes />
+    </ToastStore>
   );
 }
 
