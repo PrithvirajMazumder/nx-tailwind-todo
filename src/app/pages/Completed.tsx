@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { TodoItems } from '@/components/TodoItems';
 
 export const Completed = () => {
